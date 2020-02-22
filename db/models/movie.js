@@ -62,7 +62,8 @@ module.exports = (sequelize) => {
       //   timestamps: false,}
 
     // modelName: 'movie', //  set model name to 'movie'
-    timestamps: false, // disable timestamps
+    timestamps: true, // disable timestamps
+    paranoid: true, // enables "soft" deletes; only works if timestamps is NOT false
     // freezeTableName: true, // disable automatic pluralization of table names
     sequelize // shorthand for sequelize: sequelize
   });
